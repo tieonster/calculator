@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="./static/css/calculator.css">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='container' id="calculator-container">
+          <p id="ti">TI-00</p>
+          <form class="calculator-form" name="calculator">
+            
+            <input type="text" id="calculator-display" value=""/>
+            <br>
+            
+            <input type="button" value="1" class="calculator-number input-buttons" />
+            <input type="button" value="2" class="calculator-number input-buttons" />
+            <input type="button" value="3" class="calculator-number input-buttons" />
+            <input type="button" value="+" class="calculator-operator input-buttons" />
+            <br>
+            
+            <input type="button" value="4" class="calculator-number input-buttons" />
+            <input type="button" value="5" class="calculator-number input-buttons" />
+            <input type="button" value="6" class="calculator-number input-buttons" />
+            <input type="button" value="-" class="calculator-operator input-buttons"/>
+            <br>
+          
+            <input type="button" value="7" class="calculator-number input-buttons" />
+            <input type="button" value="8" class="calculator-number input-buttons" />
+            <input type="button" value="9" class="calculator-number input-buttons" />
+            <input type="button" value="*" class="calculator-operator input-buttons" />
+            <br>
+        
+            <input type="button" value="CE" id="calculator-clear" class="input-buttons" />
+            <input type="button" value="0" class="calculator-number input-buttons" />
+            <input type="button" value="=" id="calculator-equal" class="input-buttons" />
+            <input type="button" value="/" class="calculator-operator input-buttons" />
+            <br>
+
+            <input type="button" value="reverse" id="calculator-reverse" class="bottom-input-buttons"/>
+            <input type="button" value="sort" id="calculator-sort" class="bottom-input-buttons"/>
+            <br>
+  
+    
+          </form>
+        </div>
+        
+        <script type="text/javascript" src="./static/js/calculator.js"></script>
+    </body>
+</html>
