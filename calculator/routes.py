@@ -1,7 +1,8 @@
 from calculator import app
 from flask import render_template, request, jsonify
-from .operators import *
+from .easy import *
 from .not_as_easy import *
+from .not_easy import *
 
 @app.route("/")
 def calculator():
@@ -42,3 +43,20 @@ def sort():
   
   return jsonify({'calculated_value': calculated_value})
 
+@app.route("/prime", methods=['POST'])
+def prime():
+  calculated_value = ""
+  print(request.get_json())
+  
+  calculated_value = isPrime(int(request.get_json()['arg1']))
+  
+  return jsonify({'calculated_value': calculated_value})
+
+@app.route("/palindrome", methods=['POST'])
+def palindrome():
+  calculated_value = ""
+  print(request.get_json())
+  
+  calculated_value = isPalindrome(int(request.get_json()['arg1']))
+  
+  return jsonify({'calculated_value': calculated_value})

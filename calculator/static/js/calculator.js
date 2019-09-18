@@ -128,4 +128,70 @@ $(function(){
     operator = ""
     arg2 = ""
   })
+
+  $("#calculator-palindrome").click(function() {
+    
+    arg1 = $("#calculator-display").val();
+
+    var data = JSON.stringify({
+      arg1: arg1,
+      arg2: "",
+      operator: "",
+    })
+
+    $.ajax({
+      type: "POST",
+      url: "/palindrome",
+      data: data,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      success: function(result) {
+        console.log("result: " + result['calculated_value']);
+        $("#calculator-display").val(result['calculated_value']);
+      },
+      error: function(result) {
+        console.log("error: " + result);
+        $("#calculator-display").val('error');
+      }
+    });
+
+    calculatedValueShown = true;
+    arg1 = ""
+    operator = ""
+    arg2 = ""
+  })
+
+  $("#calculator-prime").click(function() {
+    
+    arg1 = $("#calculator-display").val();
+
+    var data = JSON.stringify({
+      arg1: arg1,
+      arg2: "",
+      operator: "",
+    })
+
+    $.ajax({
+      type: "POST",
+      url: "/prime",
+      data: data,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      success: function(result) {
+        console.log("result: " + result['calculated_value']);
+        $("#calculator-display").val(result['calculated_value']);
+      },
+      error: function(result) {
+        console.log("error: " + result);
+        $("#calculator-display").val('error');
+      }
+    });
+
+    calculatedValueShown = true;
+    arg1 = ""
+    operator = ""
+    arg2 = ""
+  })
 });
