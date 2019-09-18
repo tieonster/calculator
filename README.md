@@ -18,4 +18,7 @@
 
 **5. Visit localhost:5000 to view the Flask application**
 
-**6. Complete the functions located in easy.py, not_as_easy.py and not_easy.py**
+**6. Complete the functions located in**
+- easy.py
+- not_as_easy.py
+- not_easy.py (if you are bored)
